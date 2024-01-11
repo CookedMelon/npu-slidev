@@ -13,17 +13,14 @@ Learn more about Slidev on [documentations](https://sli.dev/).
 # Docker
 
 ```shell
-docker pull tangramor/slidev:latest
-docker run --name slidev --rm -it \
-    --user node \
-    -v ${PWD}:/slidev \
-    -p 3030:3030 \
-    tangramor/slidev:latest
-
-
-docker build -t npu-slidev-img .
+docker build -t npu-slidev .
 docker rm -f slidev
 docker run --name slidev --rm -it \
     -p 3030:3030 \
-    npu-slidev-img
+    -v .:/slidev \
+    npu-slidev
 ```
+
+# Preview
+
+http://slidev.v50to.cc:3030/

@@ -63,6 +63,10 @@ image: '/image7.png'
 ```
 
 ---
+src: /pages/code.md
+---
+
+---
 src: /pages/bootstrap.md
 ---
 
@@ -71,7 +75,7 @@ src: /pages/bootstrap-grid.md
 ---
 
 ---
-src: /pages/n-carousel.md
+src: /pages/naive-show.md
 ---
 
 ---
@@ -79,4 +83,3 @@ theme: seriph
 layout: statement
 ---
 # 敬请批评指正
----
