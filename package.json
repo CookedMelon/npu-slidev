@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "build": "slidev nputheme.md build",
-        "dev": "slidev nputheme.md --open",
+        "dev": "slidev nputheme.md --remote npusec",
         "export": "slidev nputheme.md export"
     },
     "dependencies": {
