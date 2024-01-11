@@ -1,16 +1,17 @@
 {
-  "name": "npu-slidev",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "build": "slidev build",
-    "dev": "slidev --open",
-    "export": "slidev export"
-  },
-  "dependencies": {
-    "@slidev/cli": "^0.46.1",
-    "@slidev/theme-default": "latest",
-    "@slidev/theme-seriph": "latest",
-    "naive-ui": "^2.37.3"
-  }
+    "name": "npu-slidev",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "build": "slidev nputheme.md build",
+        "dev": "slidev nputheme.md --open",
+        "export": "slidev nputheme.md export"
+    },
+    "dependencies": {
+        "@slidev/cli": "^0.46.1",
+        "@slidev/theme-default": "latest",
+        "@slidev/theme-seriph": "latest",
+        "bootstrap": "^5.3.0-alpha1",
+        "naive-ui": "^2.37.3"
+    }
 }
