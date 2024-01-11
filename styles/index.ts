@@ -1,3 +1,3 @@
 import './layout.css'
 import './code.css'
-import './bootstrap/dist/css/bootstrap.min.css'
+import './bootstrap/dist-copy/css/bootstrap.min.css'

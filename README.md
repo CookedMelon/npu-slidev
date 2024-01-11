@@ -19,4 +19,11 @@ docker run --name slidev --rm -it \
     -v ${PWD}:/slidev \
     -p 3030:3030 \
     tangramor/slidev:latest
+
+
+docker build -t npu-slidev-img .
+docker rm -f slidev
+docker run --name slidev --rm -it \
+    -p 3030:3030 \
+    npu-slidev-img
 ```
