@@ -13,6 +13,6 @@ Learn more about Slidev on [documentations](https://sli.dev/).
 # Docker
 
 ```
-docker build -t npu-slidev-img
+docker build -t npu-slidev-img .
 docker run -d -it --name npu-slidev -p 1145:1145 -v ./:/app npu-slidev-img
 ```
