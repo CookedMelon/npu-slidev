@@ -1,0 +1,16 @@
+.h-center {
+    display: flex;
+    text-align: center !important;
+    /* 水平居中 */
+}
+
+.v-center {
+    /* display: flex; */
+    /* align-items: center !important; */
+    /* 垂直居中 */
+    margin: auto
+}
+
+* {
+    word-break: break-all
+}

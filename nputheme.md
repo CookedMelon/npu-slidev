@@ -78,6 +78,12 @@ src: /pages/bootstrap-grid.md
 src: /pages/naive-show.md
 ---
 
+
+---
+src: /pages/diy.md
+---
+
+
 ---
 theme: seriph
 layout: statement
