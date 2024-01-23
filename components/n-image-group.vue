@@ -8,4 +8,5 @@ import { NImageGroup } from 'naive-ui'
     </n-image-group>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>
