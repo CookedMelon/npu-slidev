@@ -1,8 +1,6 @@
 <!-- 传参为dir:[h|v]、[height]， 如果不设置height则默认充满高度到靠近页面底部 -->
 <template>
     <div :class="[scrollClass]" :style="scrollStyle">
-        <div id="base-in-scroll" style="position: absolute; top: 100px; left: 0; width: 0; height: 0; z-index: -1;"></div>
-        <div id="base-in-scroll2" style="position: absolute; top: 200px; left: 0; width: 0; height: 0; z-index: -1;"></div>
         <slot></slot>
     </div>
 </template>
@@ -60,23 +58,22 @@ export default {
             // 获取 #slidev-content 的底部位置
             const slideContent = document.querySelector('#slide-content');
             const element = this.$el;  // 获取当前组件元素
-            const base1 = document.querySelector('#base-in-scroll');
-            const base2 = document.querySelector('#base-in-scroll2');
-            if (slideContent && element && base1 && base2) {
-                const baseRect1 = base1.getBoundingClientRect();
-                const baseRect2 = base2.getBoundingClientRect();
-                const baseTop = baseRect2.top - baseRect1.top;
+            if (slideContent && element) {
+                // slideContent的高度
+                const slideContentHeight = slideContent.clientHeight;  // 获取#slidev-content的高度
+                // console.log("slideContentHeight", slideContentHeight);
 
 
                 // 计算element和slideContent顶部的间距
                 const slideContentRect = slideContent.getBoundingClientRect();
+                const slidevHeightInView = slideContentRect.height;  // 获取#slidev-content的高度
+
+
                 const elementRect = element.getBoundingClientRect();
-                this.elementTop = (elementRect.top + window.scrollY - slideContentRect.top + window.scrollY) / baseTop * 100;  // 计算组件顶部相对于#slidev-content的顶部位置
+                this.elementTop = (elementRect.top + window.scrollY - slideContentRect.top + window.scrollY) / slidevHeightInView * slideContentHeight;  // 计算组件顶部相对于#slidev-content的顶部位置
                 console.log("this.elementTop", this.elementTop);
 
-                // slideContent的高度
-                const slideContentHeight = slideContent.clientHeight;  // 获取#slidev-content的高度
-                // console.log("slideContentHeight", slideContentHeight);
+
 
                 // 将2.5rem转换为px
                 const rootFontSize = parseFloat(window.getComputedStyle(document.documentElement).fontSize);  // 获取根元素的字体大小
