@@ -18,6 +18,10 @@ export default {
             type: String,
             default: '',
         },
+        width: {
+            type: String,
+            default: '',
+        },
     },
     data() {
         return {
@@ -40,7 +44,7 @@ export default {
             // 动态计算高度，确保下边与页面底部平齐
             return {
                 height: this.height || `${this.componentHeight}px`,
-                // backgroundColor: 'yellow',
+                width: this.width
             };
         },
     },
